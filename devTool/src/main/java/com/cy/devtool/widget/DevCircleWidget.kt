@@ -6,6 +6,8 @@ import android.content.res.ColorStateList
 import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
 import android.widget.FrameLayout
+import androidx.core.content.ContextCompat
+import com.cy.devtool.R
 import com.cy.devtool.utils.DragViewUtil
 
 
@@ -21,7 +23,7 @@ class DevCircleWidget @JvmOverloads constructor(
 
     private fun setBg() {
         val bgDrawable = GradientDrawable()
-        bgDrawable.color = ColorStateList.valueOf(0x55333333)
+        bgDrawable.color = ColorStateList.valueOf(ContextCompat.getColor(context,R.color.dev_circle_color))
         bgDrawable.cornerRadius = minOf(measuredWidth / 2f, measuredHeight / 2f)
         background = bgDrawable
     }
@@ -33,7 +35,7 @@ class DevCircleWidget @JvmOverloads constructor(
     private var mTranslucentStatus = false
 
     private val translucentAnimator: ObjectAnimator =
-        ObjectAnimator.ofFloat(this, "alpha", 1f, 0.1f)
+        ObjectAnimator.ofFloat(this, "alpha", 1f, 0.6f)
 
     private fun changeTranslucentStatus(translucent: Boolean) {
         if (mTranslucentStatus == translucent) {

@@ -1,6 +1,7 @@
 package com.cy.devtool.core
 
 import android.app.Activity
+import android.view.View
 import android.view.ViewGroup
 import android.view.Window
 import com.cy.devtool.R
@@ -53,7 +54,7 @@ internal class DevViewHelper(private val activity: Activity) {
     }
 
     private fun showAppMessage() {
-
+        mDevWidget.visibility = View.GONE
     }
 
     fun onDestroyed() {}

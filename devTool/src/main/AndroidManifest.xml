@@ -3,11 +3,17 @@
 
     <application>
         <activity
+            android:name=".ui.canvas.CanvasRuleActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:exported="false" />
+        <activity
             android:name=".ui.DevPanelActivity"
             android:theme="@style/Theme.AppCompat.DayNight" />
+
         <provider
-            android:authorities="${applicationId}.dev.init"
             android:name=".DevContentProvider"
+            android:authorities="${applicationId}.dev.init"
             android:exported="false" />
     </application>
+
 </manifest>
